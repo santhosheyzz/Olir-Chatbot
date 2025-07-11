@@ -1,4 +1,4 @@
-# 🤖 OLIR Chatbot – RAG-Based PDF Question Answering System
+# OLIR Chatbot – RAG-Based PDF Question Answering System
 
 OLIR Chatbot is a document-aware AI assistant built using Retrieval-Augmented Generation (RAG). Users can upload PDF documents and chat with an AI that responds based on the uploaded content. The system includes a modern React-based frontend and a powerful FastAPI backend, featuring semantic search, GPT-based reasoning, and persistent chat history.
 
