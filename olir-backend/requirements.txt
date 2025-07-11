@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+pypdf
+openai
+faiss-cpu
+tiktoken
+python-dotenv
+sentence-transformers
+youtube-transcript-api
+pytube
