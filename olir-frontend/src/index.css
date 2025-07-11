@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: theme('colors.primary.DEFAULT');
+    --color-primary-foreground: theme('colors.primary.foreground');
+    --color-secondary: theme('colors.secondary.DEFAULT');
+    --color-secondary-foreground: theme('colors.secondary.foreground');
+    --color-background: theme('colors.background');
+    --color-surface: theme('colors.surface');
+    --color-text-primary: theme('colors.text-primary');
+    --color-text-secondary: theme('colors.text-secondary');
+    --color-border: theme('colors.border');
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white bg-opacity-70 backdrop-blur-lg border border-white border-opacity-20 shadow-glass rounded-2xl;
+  }
+
+  .glass-card-dark {
+    @apply bg-secondary-900 bg-opacity-70 backdrop-blur-lg border border-secondary-700 border-opacity-20 shadow-glass-dark rounded-2xl;
+  }
+}
+
+@layer utilities {
+  .shadow-floating {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #3b82f6; /* blue-500 */
+    --color-primary-50: #eff6ff; /* blue-50 */
+    --color-primary-100: #dbeafe; /* blue-100 */
+    --color-primary-200: #bfdbfe; /* blue-200 */
+    --color-primary-300: #93c5fd; /* blue-300 */
+    --color-primary-400: #60a5fa; /* blue-400 */
+    --color-primary-500: #3b82f6; /* blue-500 */
+    --color-primary-600: #2563eb; /* blue-600 */
+    --color-primary-700: #1d4ed8; /* blue-700 */
+    --color-primary-800: #1e40af; /* blue-800 */
+    --color-primary-900: #1e3a8a; /* blue-900 */
+    --color-primary-foreground: #ffffff; /* white */
+
+    /* Secondary Colors */
+    --color-secondary: #1f2937; /* gray-800 */
+    --color-secondary-50: #f9fafb; /* gray-50 */
+    --color-secondary-100: #f3f4f6; /* gray-100 */
+    --color-secondary-200: #e5e7eb; /* gray-200 */
+    --color-secondary-300: #d1d5db; /* gray-300 */
+    --color-secondary-400: #9ca3af; /* gray-400 */
+    --color-secondary-500: #6b7280; /* gray-500 */
+    --color-secondary-600: #4b5563; /* gray-600 */
+    --color-secondary-700: #374151; /* gray-700 */
+    --color-secondary-800: #1f2937; /* gray-800 */
+    --color-secondary-900: #111827; /* gray-900 */
+    --color-secondary-foreground: #ffffff; /* white */
+
+    /* Accent Colors */
+    --color-accent: #06b6d4; /* cyan-500 */
+    --color-accent-50: #ecfeff; /* cyan-50 */
+    --color-accent-100: #cffafe; /* cyan-100 */
+    --color-accent-200: #a5f3fc; /* cyan-200 */
+    --color-accent-300: #67e8f9; /* cyan-300 */
+    --color-accent-400: #22d3ee; /* cyan-400 */
+    --color-accent-500: #06b6d4; /* cyan-500 */
+    --color-accent-600: #0891b2; /* cyan-600 */
+    --color-accent-700: #0e7490; /* cyan-700 */
+    --color-accent-800: #155e75; /* cyan-800 */
+    --color-accent-900: #164e63; /* cyan-900 */
+    --color-accent-foreground: #ffffff; /* white */
+
+    /* Background Colors */
+    --color-background: #ffffff; /* white */
+    --color-background-secondary: #f8fafc; /* slate-50 */
+    --color-surface: #f8fafc; /* slate-50 */
+    --color-surface-secondary: #f1f5f9; /* slate-100 */
+
+    /* Text Colors */
+    --color-text-primary: #1f2937; /* gray-800 */
+    --color-text-secondary: #64748b; /* slate-500 */
+    --color-text-muted: #94a3b8; /* slate-400 */
+    --color-text-inverse: #ffffff; /* white */
+
+    /* Status Colors */
+    --color-success: #10b981; /* emerald-500 */
+    --color-success-50: #ecfdf5; /* emerald-50 */
+    --color-success-100: #d1fae5; /* emerald-100 */
+    --color-success-200: #a7f3d0; /* emerald-200 */
+    --color-success-300: #6ee7b7; /* emerald-300 */
+    --color-success-400: #34d399; /* emerald-400 */
+    --color-success-500: #10b981; /* emerald-500 */
+    --color-success-600: #059669; /* emerald-600 */
+    --color-success-700: #047857; /* emerald-700 */
+    --color-success-800: #065f46; /* emerald-800 */
+    --color-success-900: #064e3b; /* emerald-900 */
+    --color-success-foreground: #ffffff; /* white */
+
+    --color-warning: #f59e0b; /* amber-500 */
+    --color-warning-50: #fffbeb; /* amber-50 */
+    --color-warning-100: #fef3c7; /* amber-100 */
+    --color-warning-200: #fde68a; /* amber-200 */
+    --color-warning-300: #fcd34d; /* amber-300 */
+    --color-warning-400: #fbbf24; /* amber-400 */
+    --color-warning-500: #f59e0b; /* amber-500 */
+    --color-warning-600: #d97706; /* amber-600 */
+    --color-warning-700: #b45309; /* amber-700 */
+    --color-warning-800: #92400e; /* amber-800 */
+    --color-warning-900: #78350f; /* amber-900 */
+    --color-warning-foreground: #ffffff; /* white */
+
+    --color-error: #ef4444; /* red-500 */
+    --color-error-50: #fef2f2; /* red-50 */
+    --color-error-100: #fee2e2; /* red-100 */
+    --color-error-200: #fecaca; /* red-200 */
+    --color-error-300: #fca5a5; /* red-300 */
+    --color-error-400: #f87171; /* red-400 */
+    --color-error-500: #ef4444; /* red-500 */
+    --color-error-600: #dc2626; /* red-600 */
+    --color-error-700: #b91c1c; /* red-700 */
+    --color-error-800: #991b1b; /* red-800 */
+    --color-error-900: #7f1d1d; /* red-900 */
+    --color-error-foreground: #ffffff; /* white */
+
+    /* Border Colors */
+    --color-border: rgba(148, 163, 184, 0.2); /* slate-400 with opacity */
+    --color-border-accent: #3b82f6; /* blue-500 */
+    --color-border-muted: rgba(148, 163, 184, 0.1); /* slate-400 with lower opacity */
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.8); /* white with opacity */
+    --glass-border: rgba(255, 255, 255, 0.2); /* white with opacity */
+    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); /* custom shadow */
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-xl: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+    /* Animation */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-theme="dark"] {
+    /* Primary Colors - adjusted for dark mode */
+    --color-primary: #60a5fa; /* blue-400 */
+    --color-primary-foreground: #1e3a8a; /* blue-900 */
+
+    /* Secondary Colors - adjusted for dark mode */
+    --color-secondary: #374151; /* gray-700 */
+    --color-secondary-foreground: #f9fafb; /* gray-50 */
+
+    /* Accent Colors - adjusted for dark mode */
+    --color-accent: #22d3ee; /* cyan-400 */
+    --color-accent-foreground: #164e63; /* cyan-900 */
+
+    /* Background Colors - dark mode */
+    --color-background: #111827; /* gray-900 */
+    --color-background-secondary: #1f2937; /* gray-800 */
+    --color-surface: #1f2937; /* gray-800 */
+    --color-surface-secondary: #374151; /* gray-700 */
+
+    /* Text Colors - dark mode */
+    --color-text-primary: #f9fafb; /* gray-50 */
+    --color-text-secondary: #d1d5db; /* gray-300 */
+    --color-text-muted: #9ca3af; /* gray-400 */
+    --color-text-inverse: #111827; /* gray-900 */
+
+    /* Border Colors - dark mode */
+    --color-border: rgba(75, 85, 99, 0.3); /* gray-600 with opacity */
+    --color-border-muted: rgba(75, 85, 99, 0.2); /* gray-600 with lower opacity */
+
+    /* Glassmorphism - dark mode */
+    --glass-bg: rgba(31, 41, 55, 0.8); /* gray-800 with opacity */
+    --glass-border: rgba(75, 85, 99, 0.3); /* gray-600 with opacity */
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); /* darker shadow */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-card {
+    @apply glass rounded-lg;
+  }
+
+  .transition-smooth {
+    transition: var(--transition-normal);
+  }
+
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+
+  .transition-slow {
+    transition: var(--transition-slow);
+  }
+
+  .shadow-custom {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .shadow-floating {
+    box-shadow: var(--shadow-2xl);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
