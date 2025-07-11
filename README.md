@@ -30,6 +30,13 @@ OLIR Chatbot is a document-aware AI assistant built using Retrieval-Augmented Ge
 - TailwindCSS for styling  
 - React Router for navigation  
 - Axios for API calls  
+## Images
+
+![img alt](https://github.com/santhosheyzz/Olir-Chatbot/blob/7c964627f9a8e6464789ec5c8b37d386f9aaf548/Documentation/loading%20screen.png)
+![img alt](https://github.com/santhosheyzz/Olir-Chatbot/blob/7c964627f9a8e6464789ec5c8b37d386f9aaf548/Documentation/1.png)
+![img alt](https://github.com/santhosheyzz/Olir-Chatbot/blob/7c964627f9a8e6464789ec5c8b37d386f9aaf548/Documentation/2.png)
+![img alt](https://github.com/santhosheyzz/Olir-Chatbot/blob/7c964627f9a8e6464789ec5c8b37d386f9aaf548/Documentation/3.png)
+![img alt](https://github.com/santhosheyzz/Olir-Chatbot/blob/7c964627f9a8e6464789ec5c8b37d386f9aaf548/Documentation/4.png)
 
 ## 📂 Project Structure
 
